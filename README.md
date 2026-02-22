@@ -1,73 +1,246 @@
-# Welcome to your ASC 360 project
+# ASC 360 Dashboard
 
-## Project info
+A comprehensive insurance operations dashboard built for managing policy issuance, wallet operations, and customer management.
 
-**URL**: https://ASC 360.dev/projects/REPLACE_WITH_PROJECT_ID
+## 📋 Project Overview
 
-## How can I edit this code?
+**Repository**: ASC-360-Dashboard  
+**Status**: Active Development  
+**Version**: 1.0.0
 
-There are several ways of editing your application.
+This project serves as the primary interface for ASC 360 insurance operations, handling policy management, cover assignments, bulk issuance, and wallet management.
 
-**Use ASC 360**
+---
 
-Simply visit the [ASC 360 Project](https://ASC 360.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠 Tech Stack
 
-Changes made via ASC 360 will be committed automatically to this repo.
+This project is built with modern technologies:
 
-**Use your preferred IDE**
+| Technology | Purpose |
+|-----------|---------|
+| **Vite** | Fast build tool and dev server |
+| **React 18+** | UI framework |
+| **TypeScript** | Type-safe JavaScript |
+| **Tailwind CSS** | Utility-first styling |
+| **shadcn-ui** | High-quality UI components |
+| **Bun** | JavaScript runtime & package manager |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in ASC 360.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📁 Project Structure
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/           # Reusable React components
+│   ├── DashboardLayout.tsx
+│   ├── NavLink.tsx
+│   ├── WalletCard.tsx
+│   └── ui/              # shadcn-ui components
+├── pages/               # Page components
+│   ├── DashboardPage.tsx
+│   ├── PolicyIssuedPage.tsx
+│   ├── BulkIssuancePage.tsx
+│   ├── SingleIssuancePage.tsx
+│   ├── WalletPage.tsx
+│   ├── PaymentsPage.tsx
+│   ├── AssignCoversPage.tsx
+│   ├── CoverSelectionPage.tsx
+│   ├── OperatorProfilePage.tsx
+│   └── QuoteLinksPage.tsx
+├── hooks/               # Custom React hooks
+├── lib/                 # Utilities and API functions
+├── test/                # Unit tests
+└── main.tsx             # Application entry point
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🚀 Getting Started
 
-**Use GitHub Codespaces**
+### Prerequisites
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Node.js** 18+ or **Bun** 1.0+
+- Git
 
-## What technologies are used for this project?
+### Installation
 
-This project is built with:
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/adityajat2606/ASC-360-Dashboard.git
+   cd ASC-360-Dashboard
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. **Install dependencies**
+   ```sh
+   bun install
+   # or
+   npm install
+   ```
 
-## How can I deploy this project?
+3. **Start the development server**
+   ```sh
+   bun run dev
+   # or
+   npm run dev
+   ```
 
-Simply open [ASC 360](https://ASC 360.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+   The application will be available at `http://localhost:5173` (or the port displayed in your terminal).
 
-## Can I connect a custom domain to my ASC 360 project?
+---
 
-Yes, you can!
+## 📝 Available Scripts
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+# Development
+bun run dev          # Start dev server with hot reload
 
-Read more here: [Setting up a custom domain](https://docs.ASC 360.dev/features/custom-domain#custom-domain)
+# Building
+bun run build        # Build for production
+bun run preview      # Preview production build locally
+
+# Code Quality
+bun run lint         # Run ESLint
+bun run format       # Format code
+
+# Testing
+bun run test         # Run unit tests
+bun run test:watch   # Run tests in watch mode
+```
+
+---
+
+## 🔧 Development Workflow
+
+### Editing Code - Multiple Options
+
+#### 1. **Local Development (Recommended)**
+Clone and develop locally using your IDE for the best experience:
+```sh
+git clone https://github.com/adityajat2606/ASC-360-Dashboard.git
+cd ASC-360-Dashboard
+bun install
+bun run dev
+```
+
+#### 2. **GitHub Web Editor**
+- Navigate to the repository
+- Click the "Edit" button (pencil icon) on any file
+- Make changes and commit directly
+
+#### 3. **GitHub Codespaces**
+- Click "Code" button on the repository
+- Select "Codespaces" tab
+- Create a new codespace for cloud-based development
+- Edit, commit, and push changes directly
+
+---
+
+## 🎨 UI Components
+
+This project uses **shadcn-ui** for production-ready components including:
+- Forms and Inputs
+- Navigation elements
+- Dialogs and Modals
+- Cards and Layouts
+- Tables and Data displays
+- Alerts and Notifications
+
+All components are styled with Tailwind CSS for consistency.
+
+---
+
+## 🗂 Key Features
+
+- **Dashboard**: Centralized overview of insurance operations
+- **Policy Management**: Issue, manage, and track policies
+- **Wallet System**: Handle wallet operations and transactions
+- **Bulk Operations**: Process multiple policies efficiently
+- **Cover Assignment**: Assign insurance covers to policies
+- **Payment Tracking**: Monitor and manage payments
+- **Operator Profile**: Manage operator information
+
+---
+
+## 🔌 API Integration
+
+The project integrates with backend services through `src/lib/api.ts`. Key endpoints include policy management, wallet operations, and user management.
+
+---
+
+## 📦 Dependencies
+
+**Main Dependencies:**
+- `react`: UI framework
+- `react-dom`: React DOM rendering
+- `react-router-dom`: Client-side routing
+- `@radix-ui/*`: Unstyled, accessible components
+- `tailwindcss`: Utility CSS framework
+- `typescript`: Type safety
+
+**Dev Dependencies:**
+- `vite`: Build tool
+- `eslint`: Code linting
+- `vitest`: Unit testing
+- `@testing-library/react`: React testing utilities
+
+---
+
+## 🚀 Deployment
+
+### Build for Production
+```sh
+bun run build
+# Output: dist/
+```
+
+The optimized build is ready for deployment to any static hosting service.
+
+### Hosting Options
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS S3 + CloudFront
+- Custom domain setup available
+
+---
+
+## ✅ Testing
+
+Run the test suite:
+```sh
+bun run test           # Single run
+bun run test:watch     # Watch mode
+```
+
+Tests are located in `src/test/` using Vitest and React Testing Library.
+
+---
+
+## 🤝 Contributing
+
+1. Create a feature branch: `git checkout -b feature/your-feature`
+2. Commit changes: `git commit -m "Add your feature"`
+3. Push to branch: `git push origin feature/your-feature`
+4. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is proprietary. Unauthorized copying or distribution is prohibited.
+
+---
+
+## 📞 Support
+
+For questions or issues, please contact the development team or create an issue in the repository.
+
+---
+
+## 🔗 Useful Links
+
+- [Vite Documentation](https://vitejs.dev/)
+- [React Documentation](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn-ui](https://ui.shadcn.com/)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
